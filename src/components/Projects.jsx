@@ -2,6 +2,34 @@ import { projects } from '../data.js'
 import { Icon } from './Icons.jsx'
 import Reveal from './Reveal.jsx'
 
+function ProjectImages({ p }) {
+  const images = p.images ?? []
+
+  if (images.length >= 2) {
+    return (
+      <div className="relative h-56 md:h-72">
+        <img src={images[0]} alt={`${p.title} screenshot 1`} className="absolute top-0 left-0 w-[80%] h-[75%] object-cover rounded-xl border border-line shadow-2xl" />
+        <img src={images[1]} alt={`${p.title} screenshot 2`} className="absolute bottom-0 right-0 w-[62%] h-[62%] object-cover rounded-xl border border-line shadow-2xl bg-elev" />
+      </div>
+    )
+  }
+
+  if (images.length === 1) {
+    return (
+      <div className="relative h-56 md:h-72">
+        <img src={images[0]} alt={`${p.title} screenshot`} className="w-full h-full object-cover object-top rounded-xl border border-line shadow-2xl" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="h-56 md:h-72 rounded-xl border border-line bg-elev flex flex-col items-center justify-center gap-2">
+      <span className="font-display text-5xl text-dim">{p.initials}</span>
+      <span className="text-xs text-dim">Screenshots coming soon</span>
+    </div>
+  )
+}
+
 function ProjectCard({ p, i }) {
   const reverse = i % 2 === 1
   return (
@@ -37,17 +65,7 @@ function ProjectCard({ p, i }) {
         )}
       </div>
       <div className="flex-1 w-full">
-        {p.images ? (
-          <div className="relative h-56 md:h-72">
-            <img src={p.images[0]} alt="" className="absolute top-0 left-0 w-[80%] h-[75%] object-cover rounded-xl border border-line shadow-2xl" />
-            <img src={p.images[1]} alt="" className="absolute bottom-0 right-0 w-[62%] h-[62%] object-cover rounded-xl border border-line shadow-2xl bg-elev" />
-          </div>
-        ) : (
-          <div className="h-56 md:h-72 rounded-xl border border-line bg-elev flex flex-col items-center justify-center gap-2">
-            <span className="font-display text-5xl text-dim">{p.initials}</span>
-            <span className="text-xs text-dim">Screenshots coming soon</span>
-          </div>
-        )}
+        <ProjectImages p={p} />
       </div>
     </div>
   )

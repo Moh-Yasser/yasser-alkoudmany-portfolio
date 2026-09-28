@@ -3,6 +3,7 @@ import wakalah2 from './assets/wakalah-2.jpg'
 import medmarketSupplier1 from './assets/medmarket-supplier-1.png'
 import medmarketSupplier2 from './assets/medmarket-supplier-2.png'
 import medmarketPharma from './assets/medmarket-pharma.png'
+import ticTacToe from './assets/tic-tac-toe.png'
 
 export const BIO = "Front-end developer specializing in React and Next.js, focused on building secure, production-grade web applications: authentication and role-based access, real-time order tracking, and interfaces built to scale. Co-founder of a B2B marketplace startup, and a hackathon builder in fintech fraud prevention."
 
@@ -43,6 +44,7 @@ export const projects = [
     tech: ["React", "JavaScript"],
     demo: "https://tic-tac-toe-game-dusky-iota.vercel.app/",
     code: "https://github.com/Moh-Yasser/tic-tac-toe-game",
+    images:[ticTacToe],
     initials: "#",
     note: "Desktop only — not optimized for mobile screens ."
   }
