@@ -14,7 +14,7 @@ export const projects = [
     tech: ["React", "Next.js", "MongoDB", "JWT", "RBAC"],
     demo: "https://medmarket-supplier-eight.vercel.app/",
     code: "https://github.com/Moh-Yasser/medmarket-supplier",
-    images: [medmarketSupplier1, medmarketSupplier12],
+    images: [medmarketSupplier1, medmarketSupplier2],
     initials: "M"
   },
   {
@@ -43,7 +43,8 @@ export const projects = [
     tech: ["React", "JavaScript"],
     demo: "https://tic-tac-toe-game-dusky-iota.vercel.app/",
     code: "https://github.com/Moh-Yasser/tic-tac-toe-game",
-    initials: "#"
+    initials: "#",
+    note: "Desktop only — not optimized for mobile screens yet."
   }
 ]
 

@@ -29,6 +29,12 @@ function ProjectCard({ p, i }) {
             </a>
           )}
         </div>
+        {p.note && (
+          <p className="flex items-center gap-1.5 mt-3 text-xs text-dim">
+            <Icon.monitor s={14} />
+            {p.note}
+          </p>
+        )}
       </div>
       <div className="flex-1 w-full">
         {p.images ? (
