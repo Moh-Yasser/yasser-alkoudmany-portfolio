@@ -44,7 +44,7 @@ export const projects = [
     demo: "https://tic-tac-toe-game-dusky-iota.vercel.app/",
     code: "https://github.com/Moh-Yasser/tic-tac-toe-game",
     initials: "#",
-    note: "Desktop only — not optimized for mobile screens yet."
+    note: "Desktop only — not optimized for mobile screens ."
   }
 ]
 
